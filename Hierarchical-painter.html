@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Portfolio Details - Personal Bootstrap Template</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <style>
+    .gallery {
+      position: relative;
+      overflow: hidden;
+      height: 400px; /* Set the height of the gallery container */
+    }
+
+    #main .gallery figure {
+      position: absolute;
+      top: 0;
+      left: 0;
+      margin: 0; 
+      opacity: 0; 
+      transition: opacity 0.5s ease-in-out;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #main .gallery figure > img {
+      max-width: 100%;
+      max-height: 100%;
+      width: auto;
+      height: auto;
+    }
+
+    #main .points {
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .point {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: #aaa;
+      margin: 0 5px;
+      cursor: pointer;
+    }
+
+    .point.active {
+      background-color: #ffffff;
+    }
+
+    .abstract {
+      background-color: #949393;
+      border-radius: 10px;
+      padding-top: 10px;
+      text-align: justify;
+      margin-bottom: 20px;
+    }
+    .portfolio-title{
+      padding-top: 30px;
+    }
+
+    #main {
+      background-image: url("img/portfolio/hierarchical_painter/background.jpg");
+      background-size: cover;
+      color:rgb(246, 241, 241);
+    }
+
+    #link-article{
+      color:rgb(246, 241, 241);
+    }
+
+    #link-article:hover{
+      color:rgb(157, 157, 157);
+    }
+
+  </style>
+
+</head>
+
+<body>
+  <main id="main">
+
+    <!-- ======= Portfolio Details ======= -->
+
+      <div class="container">
+
+        <div class="row">
+
+
+            <h2 class="portfolio-title">Hierarchical Painter</h2>
+            <div class="gallery">
+              <!-- <img src="img/portfolio/hierarchical_painter/Hierarchical_painter.jpg" alt="Image 1"> -->
+              <figure><img src="img/portfolio/hierarchical_painter/Hierarchical_painter.png" alt="Image 1"></figure>
+              <figure><img src="img/portfolio/hierarchical_painter/FIG2.png" alt="Image 3"></figure>
+              <figure><img src="img/portfolio/hierarchical_painter/fig3.png" alt="Image 4"></figure>
+              <figure><img src="img/portfolio/hierarchical_painter/FIG7.png" alt="Image 5"></figure>
+              <figure><img src="img/portfolio/hierarchical_painter/FIG13.png" alt="Image 2"></figure>
+              
+            </div>
+            <div class="points"></div>
+
+            <h3>Chinese landscape painting restoration with fine-grained styles</h3>
+            <ul>
+              <li><strong>Category</strong>: AI research</li>
+              <li><strong>Project Period</strong>: Dec. 2021 - Jul. 2023</li>
+              <li><strong>Publication URL</strong>: <a href="https://link.springer.com/article/10.1007/s44267-023-00021-y" id="link-article">Hierarchical Painter</a></li>
+            </ul>
+
+            <div class = 'abstract'>
+              <p>
+                Image inpainting is a critical area of research in computer vision with a broad range of applications, 
+                including image restoration and editing. However, current inpainting models often struggle to learn the specific painting styles and fine-grained brushstrokes of 
+                individual artists when restoring Chinese landscape paintings. To address this challenge, this paper proposes <b>a novel inpainting model specifically designed for 
+                Chinese landscape paintings, featuring a hierarchical structure that can be applied to restore the famous Dwelling in the Fuchun Mountains with remarkable fidelity</b>. 
+                The proposed method leverages an image processing algorithm to extract the structural information of Chinese landscape paintings. 
+                This approach enables the model to decompose the inpainting process into two separate steps, generating less informative backgrounds and more detailed foregrounds. 
+                By seamlessly merging the generated results with the remaining portions of the original work, the proposed method can faithfully restore Chinese landscape paintings 
+                while preserving their rich details and fine-grained styles. Overall, the results of this study demonstrate that the proposed method represents a significant step forward 
+                in the field of image inpainting, particularly for the restoration of Chinese landscape paintings. The hierarchical structure and image processing algorithm used in this 
+                model is able to faithfully restore delicate and intricate details of these paintings, making it a promising tool for art restoration professionals and researchers.
+              </p>
+  
+            </div>
+
+            <h3>Workflow</h3>
+
+            <img src="img/portfolio/hierarchical_painter/FIG2.png" alt="Image 1">
+
+        </div>
+
+      </div>
+
+
+  </main><!-- End #main -->
+
+  <!-- My JS Code-->
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      let automaticInterval; // Move the declaration here
+  
+      const gallery = document.querySelector('.container .row .gallery');
+      const figures = document.querySelectorAll('.gallery figure');
+      const pointsContainer = document.querySelector('.points');
+  
+      // Create navigation points
+      for (let i = 0; i < figures.length; i++) {
+        const point = document.createElement('div');
+        point.classList.add('point');
+        point.addEventListener('click', function() {
+          clearInterval(automaticInterval);
+          showImage(i);
+        });
+        pointsContainer.appendChild(point);
+      }
+  
+      let currentIndex = 0;
+  
+      function showImage(index) {
+        figures[currentIndex].style.opacity = 0;
+        figures[index].style.opacity = 1;
+        pointsContainer.children[currentIndex].classList.remove('active');
+        pointsContainer.children[index].classList.add('active');
+        currentIndex = index;
+        startAutomaticSlideShow();
+      }
+  
+      function startAutomaticSlideShow() {
+        clearInterval(automaticInterval);
+        automaticInterval = setInterval(function() {
+          const nextIndex = (currentIndex + 1) % figures.length;
+          showImage(nextIndex);
+        }, 2500); // Change the time interval (in milliseconds) as needed
+      }
+  
+      // Initial setup
+      showImage(0);
+  
+      // Start automatic slideshow
+      startAutomaticSlideShow();
+    });
+  </script>
+  
+</body>
+
+</html>

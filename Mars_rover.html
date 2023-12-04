@@ -27,7 +27,7 @@
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 
   <style>
     .gallery {
@@ -102,6 +102,28 @@
       color:rgb(157, 157, 157);
     }
 
+    .image-container1 {
+      display: inline-grid;
+      justify-content: center;
+      align-items: center;
+      grid-template-columns: 48% 48%;
+      grid-template-rows: auto;
+      row-gap: 20px;
+      column-gap: 10px;
+    }
+    .image-container1 video {
+
+      width: 100%;
+      margin: 10px;
+      border-radius: 10px;
+    }
+    .image-container1 img {
+      width: 100%;
+      height: auto;
+      margin: 10px;
+      border-radius: 10px;
+    }
+
   </style>
 
 </head>
@@ -112,8 +134,7 @@
     <!-- ======= Portfolio Details ======= -->
 
       <div class="container">
-        <model-viewer src="img/portfolio/mar_rover/assem.gltf" alt="VR Headset"></model-viewer>
-
+        <!-- <model-viewer src="img/portfolio/mar_rover/assem.gltf" alt="VR Headset"></model-viewer> -->
 
         <div class="row">
 
@@ -147,10 +168,23 @@
   
             </div>
 
-            <h3>Workflow</h3>
+            <h3>Assembling Process</h3>
 
-            <img src="img/portfolio/hierarchical_painter/FIG2.png" alt="Image 1">
+            <div class="image-container1">
+              <img src="img/portfolio/mar_rover/exp/exp1.png" alt="Image 2">
 
+              <img src="img/portfolio/mar_rover/exp/exp4.png" alt="Image 4">
+
+              <video id="myVideo" width="640" height="360" controls loop>
+                <source src="img/portfolio/mar_rover/exp/exp2.mp4" type="video/mp4">
+              </video>
+
+              <video id="myVideo1" width="640" height="360" controls loop>
+                <source src="img/portfolio/mar_rover/exp/exp3.mp4" type="video/mp4">
+              </video>              
+             
+            </div>
+             
         </div>
 
       </div>
@@ -205,6 +239,22 @@
       startAutomaticSlideShow();
     });
   </script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+      var video = document.getElementById('myVideo');
+      video.play();
+  });
+</script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+      var video = document.getElementById('myVideo1');
+      video.play();
+  });
+</script>
+
+
   <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
   <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>

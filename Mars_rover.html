@@ -78,7 +78,7 @@
 
     .abstract {
       margin-top: 10px;
-      background-color: #949393;
+      background-color: #434343;
       border-radius: 10px;
       padding-top: 10px;
       text-align: justify;
@@ -91,7 +91,9 @@
     #main {
       background-size: cover;
       color:rgb(246, 241, 241);
-      background: linear-gradient(to bottom, #303030, #808080);
+      /* background: linear-gradient(to bottom, #303030, #808080); */
+      /* background-color: black; */
+      background-image: url('img/portfolio/mar_rover/mar_background.png');   background-size: cover;
     }
 
     #link-article{
@@ -104,7 +106,7 @@
 
     .image-container1 {
       display: inline-grid;
-      justify-content: center;
+      justify-content: space-between;
       align-items: center;
       grid-template-columns: 48% 48%;
       grid-template-rows: auto;
@@ -112,7 +114,6 @@
       column-gap: 10px;
     }
     .image-container1 video {
-
       width: 100%;
       margin: 10px;
       border-radius: 10px;
@@ -232,6 +233,9 @@ model-viewer > #ar-prompt > img {
   padding-top: 2%;
 }
 
+.resume-item > h4{
+  color: white;
+}
 </style>
 
 <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
@@ -252,7 +256,9 @@ model-viewer > #ar-prompt > img {
 
             <h2 class="portfolio-title">Mars Rover</h2>
 
-            <model-viewer src="img/portfolio/mar_rover/ImageToStl.com_mf3.glb" camera-orbit="145deg 75deg 130%" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="img/portfolio/mar_rover/poster.webp" shadow-intensity="1" style="background-color: unset;">
+            <!-- style="background-color: unset;" -->
+            <!-- style="background-image: url('img/portfolio/mar_rover/mar_background.jpg');  background-size: cover;" -->
+            <model-viewer src="img/portfolio/mar_rover/ImageToStl.com_mf3.glb" camera-orbit="145deg 75deg 130%" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="img/portfolio/mar_rover/poster.webp" shadow-intensity="1" style="background-color: unset;" >
               <div class="progress-bar hide" slot="progress-bar">
                   <div class="update-bar"></div>
               </div>
@@ -296,6 +302,57 @@ model-viewer > #ar-prompt > img {
   
             </div>
 
+            <div class="resume">
+              <h3 style="padding-bottom: 2%;">Final Product</h3>
+              <div class="container">
+                <div class="section-title">
+                  <h2  style="font-size: medium;" >Demo</h2>
+                </div>
+
+                <div class="row">
+
+                  <div class="col-lg-6">
+          
+                    <div class="resume-item">
+                      <h4>Barrier Master</h4>
+                      <video id="Video" width=100% controls loop>
+                        <source src="img/portfolio/mar_rover/barrier_overcome.mp4" type="video/mp4">
+                      </video>
+
+                    </div>
+          
+                    <div class="resume-item">
+                      <h4>Collision-Aware Halt</h4>
+                      <video id="Video" width=100% controls loop>
+                        <source src="img/portfolio/mar_rover/sensor.mp4" type="video/mp4">
+                      </video>
+                    </div>
+          
+                  </div>
+          
+                  <div class="col-lg-6">
+                    <!-- <h3>Flexible Steering</h3> -->
+          
+                    <div class="resume-item">
+                      <h4>Pivot Steering</h4>
+                        <video id="Video" width=100% controls loop>
+                          <source src="img/portfolio/mar_rover/rotate.mp4" type="video/mp4">
+                      </video>
+                    </div>
+          
+                    <div class="resume-item">
+                      <h4>Servo Steering</h4>
+                      <video id="Video" width=100% controls loop>
+                        <source src="img/portfolio/mar_rover/servo.mp4" type="video/mp4">
+                      </video>
+                    </div>
+          
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
             <h3>Assembling Process</h3>
 
             <div class="image-container1">
@@ -312,6 +369,11 @@ model-viewer > #ar-prompt > img {
               </video>              
              
             </div>
+
+            
+
+
+
              
         </div>
 
